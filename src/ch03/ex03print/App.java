@@ -55,10 +55,20 @@ public class App {
           case 2: {
             clear();
             System.out.println("성적추가화면");
+
+            // scan.nextLine();
+
+            int kor;
+            do {
+              System.out.println("kor :");
+              kor = Integer.parseInt(scan.nextLine());
+              if (!(0 <= kor && kor <= 100)) {
+                System.out.print("성적은 0~100까지만 입력가능합니다");
+              }
+            } while (!(0 <= kor && kor <= 100));
+
             System.out.println("--------------------------------------------------------------------------------");
             System.out.println("plz press any key to continue");
-            scan.nextLine();
-            break;
           }
           // 검색
           // 페이지 현재페이지
