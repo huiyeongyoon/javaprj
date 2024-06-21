@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -26,7 +27,7 @@ public class Toy {
     FileOutputStream fos = new FileOutputStream(fileName);
     PrintStream fout = new PrintStream(fos, true, "utf-8");
 
-    Scanner userInputScanner = new Scanner(System.in);
+    Scanner userInputScanner = new Scanner(System.in, Charset.forName("utf-8"));
 
     String line = userInputScanner.nextLine();
 
